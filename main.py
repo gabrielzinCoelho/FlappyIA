@@ -3,6 +3,7 @@ import pygame
 import scipy
 
 from constants import *
+from pipe import PipeCollection
 
 def drawLabel(title, data, font, x, y, displayGame):
     label = font.render(title + " " + data, 1, defaultFontColor)
@@ -26,13 +27,18 @@ def startGame():
     msPerFrame = 0
     gameTime = 0
 
+    pipeCollectionInstance = PipeCollection(displayGame)
+    pipeCollectionInstance.createNewSet()
+
     while running:
 
         msPerFrame = clock.tick(fps)
         gameTime += msPerFrame
 
         displayGame.blit(backgroundImage, (0, 0))
-        displayGame.blit(birdImage, (displayWidth/2, displayHeight/2))
+        displayGame.blit(birdImage, (100, displayHeight - 100))
+
+        pipeCollectionInstance.updatePipeArray(msPerFrame)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT or event.type == pygame.KEYDOWN:
