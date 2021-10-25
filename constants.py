@@ -25,3 +25,11 @@ pipeMaxSize = displayHeight - pipeMinSize - pipePairGap # 300
 pipeSequenceGap = 160
 pipeStartX = displayWidth
 pipeFirstX = 400
+
+birdStartX = 200
+birdStartY = 200
+birdAlive = 1
+birdDead = 0
+birdFlyUpSpeed = -0.32
+
+gravity = 0.001
