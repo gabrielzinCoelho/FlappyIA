@@ -7,7 +7,7 @@ defaultFontSize = 18
 defaultFontColor = (40, 40, 40)
 
 backgroundFilePath = './images/background.png'
-birdFilePath = './images/bird.png'
+birdFilePath = ['./images/bird0.png', './images/bird1.png', './images/bird2.png']
 pipeFilePath = './images/pipe.png'
 
 sceneSpeed = 70/1000 #70px per second
@@ -33,3 +33,5 @@ birdDead = 0
 birdFlyUpSpeed = -0.32
 
 gravity = 0.001
+
+generationSize = 60

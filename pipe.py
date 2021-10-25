@@ -61,7 +61,7 @@ class PipeCollection():
 
         rightMost = 0
 
-        for index, pipeInstance in enumerate(self.pipes):
+        for pipeInstance in self.pipes:
 
             pipeInstance.updatePosition(msPerFrame)
 
