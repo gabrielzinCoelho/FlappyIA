@@ -47,18 +47,11 @@ def startGame():
             if event.type == pygame.QUIT:
                 running = False
             elif event.type == pygame.KEYDOWN:
-                # if event.key == pygame.K_SPACE:
-                    # birdInstance.flyUp()
-                running = False
+                if event.key == pygame.K_c and pygame.key.get_mods() & pygame.KMOD_CTRL:
+                    running = False
 
         pipeCollectionInstance.updatePipeArray(msPerFrame)
         numAlives = birdCollectionInstance.update(msPerFrame, pipeCollectionInstance.pipes)
-
-        # if birdInstance.state == birdDead:
-        #     gameTime = 0
-        #     pipeCollectionInstance.createNewSet()
-        #     birdInstance = Bird(displayGame)
-        #     attempts += 1
 
         if not numAlives:
             gameTime = 0
