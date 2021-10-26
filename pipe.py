@@ -11,7 +11,6 @@ class Pipe():
         self.image = pygame.image.load(pipeFilePath)
         self.rect = self.image.get_rect()
         self.setPosition(x, y)
-        print("Pipe is moving")
         
     def setPosition(self, x, y):
         self.rect.left = x
@@ -27,7 +26,6 @@ class Pipe():
     def checkStatus(self):
         if self.rect.right < 0:
             self.state = pipeDone
-            print("Pipe is done")
 
     def updatePosition(self, msPerFrame):
         if self.state == pipeMoving:
@@ -44,7 +42,6 @@ class PipeCollection():
 
     def addPipePair(self, x):
         pipeUpperSize = random.randint(pipeMinSize, pipeMaxSize)
-        print("Pipe upper size: " + str(pipeUpperSize))
         pipeUpperInstance = Pipe(self.displayGame, x, pipeUpperSize - pipeHeight, pipeUpper)
         pipeLowerInstance = Pipe(self.displayGame, x, pipeUpperSize + pipePairGap, pipeLower)
 
@@ -52,7 +49,6 @@ class PipeCollection():
         self.pipes.append(pipeLowerInstance)
 
     def createNewSet(self):
-        print("Configurando cena incial...")
         self.pipes = []
         for i in range(pipeFirstX, displayWidth + 1, pipeSequenceGap):
             self.addPipePair(i)

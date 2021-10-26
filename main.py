@@ -63,7 +63,7 @@ def startGame():
         if not numAlives:
             gameTime = 0
             pipeCollectionInstance.createNewSet()
-            birdCollectionInstance.createNewGeneration()
+            birdCollectionInstance.evolvePopulation()
             attempts += 1
 
         drawDataLabels(labelFont, displayGame, msPerFrame, gameTime, attempts, numAlives)
