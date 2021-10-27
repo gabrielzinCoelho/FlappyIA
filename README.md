@@ -10,7 +10,7 @@ Projeto onde uma rede neural foi desenvolvida para aprender a jogar **Flappy Bir
 
 A ideia consiste em utilizar uma seleção artificial em conjunto com uma mutação para ajustar os pesos das sinapses entre os neurônios da rede. Dessa forma, os pesos dos pássaros que obtiveram o melhor desempenho tendem a ser conservados e reproduzidos nas novas gerações, com pequenas alterações em seus valores.
 
-O jogo foi recriado do zero, sem engines, e totalmente programado na linguagem Python. A interface gráfica foi construída utilizando a biblioteca **Pygame**.
+O jogo foi recriado do zero e totalmente programado na linguagem Python. A interface gráfica foi construída utilizando a biblioteca **Pygame**.
 
 A Rede Neural utilizada foi uma Perceptron com 3 camadas:
 
